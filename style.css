@@ -1222,58 +1222,6 @@ html, body {
         }
 
     /* Garanta que o menu esteja visível por padrão */
-.sidebar {
-  width: 250px; /* Largura do menu lateral */
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background-color: #333; /* Cor de fundo do menu */
-  color: #fff; /* Cor do texto */
-  transform: translateX(0); /* Faz com que o menu esteja visível */
-  transition: transform 0.3s ease; /* Transição suave para o menu abrir/fechar */
-}
-
-.sidebar.open {
-  transform: translateX(0); /* Mantém o menu visível quando aberto */
-}
-
-.sidebar .toggle {
-  display: none; /* Esconde o ícone de toggle se o menu deve estar sempre visível */
-}
-.recent-content {
-  padding: 20px;
-}
-
-.recent-content h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.recent-items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.recent-item {
-  width: calc(33.333% - 20px);
-  box-sizing: border-box;
-}
-
-.recent-item img {
-  width: 100%;
-  height: auto;
-}
-
-.recent-item h3 {
-  font-size: 18px;
-  margin: 10px 0;
-}
-
-.recent-item p {
-  font-size: 14px;
-}
 
 
 
