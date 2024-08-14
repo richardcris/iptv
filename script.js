@@ -458,3 +458,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // script.js
 
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.getElementById('toggleButton');
+    const sidebar = document.querySelector('nav.sidebar');
+
+    toggleButton.addEventListener('click', function() {
+        sidebar.classList.toggle('active');
+    });
+});
