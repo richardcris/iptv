@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NatLive IPTV - Login</title>
     <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap'><link rel="stylesheet" href="./style.css">
+    
 </head>
 <body>
-    <div class="pop-ups">
-        <div id="popUpContainer"></div>
-    </div>
      <!-- Vídeo de Fundo -->
      <div class="video-background">
         <video autoplay muted loop id="background-video">
@@ -17,39 +17,64 @@
             Seu navegador não suporta o elemento de vídeo.
         </video>
     </div>
-    <nav class="sidebar">
+    <nav class="sidebar close">
         <header>
-            <div class="image-text">
-                <div class="image">
-                    <img src="logo.png" alt="Logo">
-                </div>
-                <div class="logo-text">
-                    <span class="name">NatLive</span>
-                    <span class="profession">IPTV</span>
-                </div>
+          <div class="image-text">
+            <span class="image">
+              <img src="logo.png" alt="image gallery">
+            </span>
+      
+            <div class="text logo-text">
+              <span class="name">NatLive </span>
+              <span class="profession">Development</span>
             </div>
-            <div id="toggleButton" class="toggle">&#9776;</div>
+          </div>
+      
+          <i class='bx bx-chevron-right toggle'></i>
         </header>
-        <div class="menu">
-            <ul class="menu-bar">
-                <li><a href="index.html"><span class="icon">🏠</span><span class="text">Início</span></a></li>
-                <li><a href="plans.html"><span class="icon">📈</span><span class="text">Planos</span></a></li>
-                <li><a href="status.html"><span class="icon">📊</span><span class="text">Status</span></a></li>
-                <li><a href="login.html"><span class="icon">🔒</span><span class="text">Login</span></a></li>
-                <li><a href="register.html"><span class="icon">📝</span><span class="text">Cadastro</span></a></li>
-                <li><a href="teste-gratis.html"><span class="icon">🎁</span><span class="text">Teste Grátis</span></a></li>
-                <li class="mode">
-                    <div class="sun-moon">
-                        <i class="sun">☀️</i>
-                        <i class="moon">🌙</i>
-                    </div>
-                    <div class="toggle-switch">
-                        <div class="switch"></div>
-                    </div>
-                </li>
-            </ul>
+      
+        <div class="menu-bar">
+          <div class="menu">
+      
+            <li class="search-box">
+              <i class='bx bx-search icon'></i>
+              <input type="text" placeholder="Search...">
+            </li>
+      
+            <li><a href="index.html"><span class="icon">🏠</span><span class="text">Início</span></a></li>
+            <li><a href="plans.html"><span class="icon">📈</span><span class="text">Planos</span></a></li>
+            <li><a href="status.html"><span class="icon">📊</span><span class="text">Status</span></a></li>
+            <li><a href="login.html"><span class="icon">🔒</span><span class="text">Login</span></a></li>
+            <li><a href="register.html"><span class="icon">📝</span><span class="text">Cadastro</span></a></li>
+            <li><a href="teste-gratis.html"><span class="icon">🎁</span><span class="text">Teste Grátis</span></a></l
+          
+      
+          class="bottom-content">
+            <li class="">
+              <a href="#">
+                <i class='bx bx-log-out icon'></i>
+                <span class="text nav-text">Logout</span>
+              </a>
+            </li>
+      
+            <li class="mode">
+              <div class="sun-moon">
+                <i class='bx bx-moon icon moon'></i>
+                <i class='bx bx-sun icon sun'></i>
+              </div>
+              <span class="mode-text text">Dark mode</span>
+      
+              <div class="toggle-switch">
+                <span class="switch"></span>
+              </div>
+            </li>
+      
+          </div>
         </div>
-    </nav>
+      
+      </nav>
+      
+     
     <div class="profile-container">
         <div id="userDisplay" class="user-display">Você não está logado.</div>
         <button id="logoutButton" style="display: none;">Sair</button>
@@ -64,6 +89,10 @@
             <button type="submit">Entrar</button>
         </form>
     </div>
+      <!-- Pop-ups de Assinaturas -->
+   <div class="pop-ups">
+    <div id="popUpContainer"></div>
+</div>
     <script src="script.js"></script>
 </body>
 </html>
