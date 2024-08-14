@@ -456,6 +456,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // script.js
 
+// script.js
+
 document.addEventListener('DOMContentLoaded', function() {
     const toggleButton = document.getElementById('toggleButton');
     const sidebar = document.querySelector('nav.sidebar');
