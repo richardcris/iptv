@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap'><link rel="stylesheet" href="./style.css">
     <title>NatLive IPTV - Página Inicial</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,16 +12,11 @@
         <div id="online-users">15</div>
         <div id="emoji" class="emoji">😊</div>
     </div>
-    <div class="text logo-text">
-        <span class="name">ICOM DIGITAL </span>
-        <span class="profession">Development</span>
-      </div>
-    </div>
     
+    <div id="popUpContainer1" class="popup-container"></div>
     
-      <!-- Sidebar Navigation -->
-       <div id="popUpContainer1" class="popup-container"></div>
-    
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
         <header>
             <div class="image-text">
                 <div class="image">
@@ -57,6 +50,7 @@
             </ul>
         </div>
     </nav>
+
     <!-- Main Content Area -->
     <div class="main-content">
         <div class="hero-section">
@@ -139,8 +133,6 @@
         <div id="userDisplay" class="user-display">Você não está logado.</div>
         <button id="logoutButton" style="display: none;">Sair</button>
     </div>
-
-    
     
     <script src="script.js"></script>
 </body>
