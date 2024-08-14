@@ -1729,6 +1729,198 @@ body {
 }
 
 
+/* Reset Básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+nav.sidebar {
+  width: 250px;
+  background-color: #222;
+  color: #fff;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  transition: all 0.3s;
+}
+
+nav.sidebar .menu-bar {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav.sidebar .menu-bar li {
+  padding: 15px;
+  border-bottom: 1px solid #333;
+}
+
+nav.sidebar .menu-bar li a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+nav.sidebar .menu-bar .icon {
+  margin-right: 10px;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav.sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      display: none;
+  }
+
+  nav.sidebar.active {
+      display: block;
+  }
+
+  .main-content {
+      margin-left: 0;
+  }
+
+  #toggleButton {
+      display: block;
+  }
+}
+
+#toggleButton {
+  display: none;
+  cursor: pointer;
+}
+
+/* Pop-ups */
+.popup-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.pop-up {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Slider */
+.movie-slider {
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+}
+
+.slide {
+  min-width: 200px;
+  margin-right: 10px;
+}
+
+.movie-slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.movie-slider .prev {
+  left: 10px;
+}
+
+.movie-slider .next {
+  right: 10px;
+}
+
+/* Área VIP */
+.profile-container {
+  padding: 10px;
+  background: #fff;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+
+.plan-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.plan-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+
+.plan-button {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.cta-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.info-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.news {
+  width: 48%;
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.recent-content {
+  margin-top: 20px;
+}
 
 
 
