@@ -1,198 +1,213 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NatLive IPTV - Página Inicial</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NatLive IPTV - Página Inicial</title>
+  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap'><link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
-    <div class="online-counter">
-        <div class="online-counter-text">Usuários online:</div>
-        <div id="online-users">15</div>
-        <div id="emoji" class="emoji">😊</div>
+  <div class="online-counter">
+    <div class="online-counter-text">Usuários online:</div>
+    <div id="online-users">15</div>
+    <div id="emoji" class="emoji">😊</div>
+</div>
+
+  <div class="profile-container">
+    <div id="userDisplay" class="user-display">Você não está logado.</div>
+    <button id="logoutButton" style="display: none;">Sair</button>
+</div>
+<!-- partial:index.partial.html -->
+<nav class="sidebar close">
+  <header>
+    <div class="image-text">
+      <span class="image">
+        <img src="logo.png" alt="image gallery">
+      </span>
+
+      <div class="text logo-text">
+        <span class="name">NatLive </span>
+        <span class="profession">Development</span>
+      </div>
     </div>
+
+    <i class='bx bx-chevron-right toggle'></i>
+  </header>
+
+  <div class="menu-bar">
+    <div class="menu">
+
+      <li class="search-box">
+        <i class='bx bx-search icon'></i>
+        <input type="text" placeholder="Search...">
+      </li>
+
+      <li><a href="index.html"><span class="icon">🏠</span><span class="text">Início</span></a></li>
+      <li><a href="plans.html"><span class="icon">📈</span><span class="text">Planos</span></a></li>
+      <li><a href="status.html"><span class="icon">📊</span><span class="text">Status</span></a></li>
+      <li><a href="vip.html"><span class="icon">🌟</span><span class="text">Área VIP</span></a></li>
+      <li><a href="login.html"><span class="icon">🔒</span><span class="text">Login</span></a></li>
+      <li><a href="register.html"><span class="icon">📝</span><span class="text">Cadastro</span></a></li>
+      <li><a href="teste-gratis.html"><span class="icon">🎁</span><span class="text">Teste Grátis</span></a></l
     
-    <div id="popUpContainer1" class="popup-container"></div>
-    
-    <!-- Sidebar Navigation -->
-    <nav class="sidebar">
-        <header>
-            <div class="image-text">
-                <div class="image">
-                    <img src="logo.png" alt="Logo">
-                </div>
-                <div class="logo-text">
-                    <span class="name">NatLive</span>
-                    <span class="profession">IPTV</span>
-                </div>
-            </div>
-            <div id="toggleButton" class="toggle">&#9776;</div>
-        </header>
-        <div class="menu">
-            <ul class="menu-bar">
-                <li><a href="index.html"><span class="icon">🏠</span><span class="text">Início</span></a></li>
-                <li><a href="plans.html"><span class="icon">📈</span><span class="text">Planos</span></a></li>
-                <li><a href="vip.html"><span class="icon">🌟</span><span class="text">Área VIP</span></a></li>
-                <li><a href="status.html"><span class="icon">📊</span><span class="text">Status</span></a></li>
-                <li><a href="login.html"><span class="icon">🔒</span><span class="text">Login</span></a></li>
-                <li><a href="register.html"><span class="icon">📝</span><span class="text">Cadastro</span></a></li>
-                <li><a href="teste-gratis.html"><span class="icon">🎁</span><span class="text">Teste Grátis</span></a></li>
-                <li class="mode">
-                    <div class="sun-moon">
-                        <i class="sun">☀️</i>
-                        <i class="moon">🌙</i>
-                    </div>
-                    <div class="toggle-switch">
-                        <div class="switch"></div>
-                    </div>
-                </li>
+
+    class="bottom-content">
+      <li class="">
+        <a href="#">
+          <i class='bx bx-log-out icon'></i>
+          <span class="text nav-text">Logout</span>
+        </a>
+      </li>
+
+      <li class="mode">
+        <div class="sun-moon">
+          <i class='bx bx-moon icon moon'></i>
+          <i class='bx bx-sun icon sun'></i>
+        </div>
+        <span class="mode-text text">Dark mode</span>
+
+        <div class="toggle-switch">
+          <span class="switch"></span>
+        </div>
+      </li>
+
+    </div>
+  </div>
+
+</nav>
+   <!-- Main Content Area -->
+   <div class="main-content">
+    <div class="hero-section">
+        <h1><span class="welcome-icon">👋</span> Bem-vindo ao NatLive IPTV</h1>
+        <p>Escolha um plano e comece a assistir aos melhores canais e conteúdos agora mesmo!</p>
+        <a href="plans.html" class="cta-button">Explore Nossos Planos</a>
+    </div>
+
+    <!-- Informações de Novidades de Filmes e Notícias -->
+    <div class="info-section">
+        <div class="news">
+            <h2>Últimas Novidades de Filmes</h2>
+            <ul>
+                <li><a href="#">Filme X estreia em breve nas telonas!</a></li>
+                <li><a href="#">Filme Y ganha prêmio de melhor direção</a></li>
+                <li><a href="#">Confira a crítica do novo filme Z</a></li>
             </ul>
         </div>
-    </nav>
-
-    <!-- Main Content Area -->
-    <div class="main-content">
-        <div class="hero-section">
-            <h1><span class="welcome-icon">👋</span> Bem-vindo ao NatLive IPTV</h1>
-            <p>Escolha um plano e comece a assistir aos melhores canais e conteúdos agora mesmo!</p>
-            <a href="plans.html" class="cta-button">Explore Nossos Planos</a>
+        <div class="news">
+            <h2>Notícias Recentes</h2>
+            <ul>
+                <li><a href="#">Nova série de TV é renovada para segunda temporada</a></li>
+                <li><a href="#">Conheça os indicados ao Oscar deste ano</a></li>
+                <li><a href="#">Streaming ultrapassa TV a cabo em audiência</a></li>
+            </ul>
         </div>
+    </div>
 
-        <!-- Informações de Novidades de Filmes e Notícias -->
-        <div class="info-section">
-            <div class="news">
-                <h2>Últimas Novidades de Filmes</h2>
-                <ul>
-                    <li><a href="#">Filme X estreia em breve nas telonas!</a></li>
-                    <li><a href="#">Filme Y ganha prêmio de melhor direção</a></li>
-                    <li><a href="#">Confira a crítica do novo filme Z</a></li>
-                </ul>
+    <!-- Catálogo de Filmes Recém-Lançados -->
+    <div class="movie-slider">
+        <button class="prev">&lt;</button>
+        <div class="slider">
+            <div class="slide"><img src="capa/filme1.jpg" alt="Filme 1"></div>
+            <div class="slide"><img src="capa/filme2.jpg" alt="Filme 2"></div>
+            <div class="slide"><img src="capa/filme3.jpg" alt="Filme 3"></div>
+            <div class="slide"><img src="capa/filme4.jpg" alt="Filme 4"></div>
+            <div class="slide"><img src="capa/filme5.jpg" alt="Filme 5"></div>
+            <div class="slide"><img src="capa/filme6.jpg" alt="Filme 6"></div>
+        </div>
+        <button class="next">&gt;</button>
+    </div>
+
+    <!-- Seção de Planos -->
+    <div class="plans-section">
+        <h2>Nossos Planos</h2>
+        <div class="plan-cards">
+            <div class="plan-card">
+                <h3>Básico</h3>
+                <p>R$19,90/mês</p>
+                <a href="subscribe.html" class="plan-button">Assine Agora</a>
             </div>
-            <div class="news">
-                <h2>Notícias Recentes</h2>
-                <ul>
-                    <li><a href="#">Nova série de TV é renovada para segunda temporada</a></li>
-                    <li><a href="#">Conheça os indicados ao Oscar deste ano</a></li>
-                    <li><a href="#">Streaming ultrapassa TV a cabo em audiência</a></li>
-                </ul>
+            <div class="plan-card">
+                <h3>Padrão</h3>
+                <p>R$39,90/mês</p>
+                <a href="subscribe.html" class="plan-button">Assine Agora</a>
             </div>
-        </div>
-
-        <!-- Catálogo de Filmes Recém-Lançados -->
-        <div class="movie-slider">
-            <button class="prev">&lt;</button>
-            <div class="slider">
-                <div class="slide"><img src="capa/filme1.jpg" alt="Filme 1"></div>
-                <div class="slide"><img src="capa/filme2.jpg" alt="Filme 2"></div>
-                <div class="slide"><img src="capa/filme3.jpg" alt="Filme 3"></div>
-                <div class="slide"><img src="capa/filme4.jpg" alt="Filme 4"></div>
-                <div class="slide"><img src="capa/filme5.jpg" alt="Filme 5"></div>
-                <div class="slide"><img src="capa/filme6.jpg" alt="Filme 6"></div>
-            </div>
-            <button class="next">&gt;</button>
-        </div>
-
-        <!-- Seção de Planos -->
-        <div class="plans-section">
-            <h2>Nossos Planos</h2>
-            <div class="plan-cards">
-                <div class="plan-card">
-                    <h3>Básico</h3>
-                    <p>R$19,90/mês</p>
-                    <a href="subscribe.html" class="plan-button">Assine Agora</a>
-                </div>
-                <div class="plan-card">
-                    <h3>Padrão</h3>
-                    <p>R$39,90/mês</p>
-                    <a href="subscribe.html" class="plan-button">Assine Agora</a>
-                </div>
-                <div class="plan-card">
-                    <h3>Premium</h3>
-                    <p>R$59,90/mês</p>
-                    <a href="subscribe.html" class="plan-button">Assine Agora</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Pop-ups de Assinaturas -->
-        <div class="pop-ups">
-            <div id="popUpContainer"></div>
-        </div>
-
-        <!-- Seção de Filmes e Séries Recentes -->
-        <div class="recent-content">
-            <h2>Filmes e Séries Recentes</h2>
-            <div id="recent-items" class="recent-items">
-                <!-- Conteúdo será inserido aqui -->
+            <div class="plan-card">
+                <h3>Premium</h3>
+                <p>R$59,90/mês</p>
+                <a href="subscribe.html" class="plan-button">Assine Agora</a>
             </div>
         </div>
     </div>
 
-    <div class="profile-container">
-        <div id="userDisplay" class="user-display">Você não está logado.</div>
-        <button id="logoutButton" style="display: none;">Sair</button>
-    </div>
-    
-    <script src="script.js"></script>
-    <script>
-        function getRandomOnlineUsers(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min;
-        }
-    
-        function animateCounter(element, start, end, duration) {
-            let startTime = null;
-    
-            function step(timestamp) {
-                if (!startTime) startTime = timestamp;
-                const progress = Math.min((timestamp - startTime) / duration, 1);
-                const current = Math.floor(progress * (end - start) + start);
-    
-                element.textContent = current;
-    
-                if (progress < 1) {
-                    window.requestAnimationFrame(step);
-                } else {
-                    element.classList.remove('animate');
-                }
+      <!-- Pop-ups de Assinaturas -->
+   <div class="pop-ups">
+    <div id="popUpContainer"></div>
+</div>
+
+
+<!-- partial -->
+  <script  src="./script.js"></script>
+  <script>
+    function getRandomOnlineUsers(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function animateCounter(element, start, end, duration) {
+        let startTime = null;
+
+        function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+            const current = Math.floor(progress * (end - start) + start);
+
+            element.textContent = current;
+
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            } else {
+                element.classList.remove('animate');
             }
-    
-            element.classList.add('animate');
-            window.requestAnimationFrame(step);
         }
-    
-        function updateOnlineUsers() {
-            const onlineUsersElement = document.getElementById('online-users');
-            const currentUsers = parseInt(onlineUsersElement.textContent, 10);
-            const newUsers = getRandomOnlineUsers(450, 1200);
-    
-            animateCounter(onlineUsersElement, currentUsers, newUsers, 1000); // Duração de 1 segundo
-        }
-    
-        // Inicializa o contador com um número entre 5 e 10
-        document.getElementById('online-users').textContent = getRandomOnlineUsers(450, 1200);
-    
-        // Atualiza o número de usuários online a cada 10 segundos
-        setInterval(updateOnlineUsers, 10000);
+
+        element.classList.add('animate');
+        window.requestAnimationFrame(step);
+    }
+
+    function updateOnlineUsers() {
+        const onlineUsersElement = document.getElementById('online-users');
+        const currentUsers = parseInt(onlineUsersElement.textContent, 10);
+        const newUsers = getRandomOnlineUsers(450, 1200);
+
+        animateCounter(onlineUsersElement, currentUsers, newUsers, 1000); // Duração de 1 segundo
+    }
+
+    // Inicializa o contador com um número entre 5 e 10
+    document.getElementById('online-users').textContent = getRandomOnlineUsers(450, 1200);
+
+    // Atualiza o número de usuários online a cada 10 segundos
+    setInterval(updateOnlineUsers, 10000);
 
 
 
 
-        const emojis = ["😊", "😎", "🚀", "🔥", "🎉"]; // Lista de emojis
+    const emojis = ["😊", "😎", "🚀", "🔥", "🎉"]; // Lista de emojis
 let emojiIndex = 0; // Índice inicial
 
 function changeEmoji() {
-    // Atualiza o conteúdo do div emoji
-    document.getElementById("emoji").textContent = emojis[emojiIndex];
+// Atualiza o conteúdo do div emoji
+document.getElementById("emoji").textContent = emojis[emojiIndex];
 
-    // Incrementa o índice do emoji
-    emojiIndex = (emojiIndex + 1) % emojis.length;
+// Incrementa o índice do emoji
+emojiIndex = (emojiIndex + 1) % emojis.length;
 }
 
 // Muda o emoji a cada 2 segundos (2000 milissegundos)
 setInterval(changeEmoji, 2000);
 
-    </script>
-    
+</script>
+
+</div>
 </body>
 </html>
