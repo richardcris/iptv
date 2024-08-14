@@ -409,49 +409,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    const names = ["João", "Maria", "Pedro", "Ana", "Carlos", "Laura", "Luiz", "Fernanda", "Richard", "Cristina", "Hyara", "Nicole", "Igor", "Nathan", "Talita", "Ângela", "Luciana", "Daniella", "Suzana", "Raul", "Enzo", "Levi"];
-    const movies = ["O Poderoso Chefão", "Vingadores: Ultimato", "Titanic", "O Rei Leão", "Star Wars", "Matrix", "Jurassic Park", "Harry Potter", "Senhor dos Anéis", "Homem-Aranha"];
-    const popUpContainer = document.getElementById('popUpContainer1');
-    const maxNames = names.length;
-    let usedNames = [];
-
-    function generateUniqueName() {
-        if (usedNames.length >= maxNames) {
-            usedNames = []; // Resetar se todos os nomes foram usados
-        }
-        let randomName;
-        do {
-            randomName = names[Math.floor(Math.random() * names.length)];
-        } while (usedNames.includes(randomName));
-        usedNames.push(randomName);
-        return randomName;
-    }
-
-    function createPopUp(message) {
-        const popUp = document.createElement('div');
-        popUp.className = 'pop-up';
-        popUp.textContent = message;
-        popUpContainer.appendChild(popUp);
-
-        // Remove pop-up após a animação
-        setTimeout(() => {
-            popUp.remove();
-        }, 5000);
-    }
-
-    function generatePopUps() {
-        setInterval(() => {
-            const name = generateUniqueName();
-            const movie = movies[Math.floor(Math.random() * movies.length)];
-            createPopUp(`${name} está assistindo "${movie}"`);
-        }, 10000); // Novo pop-up a cada 10 segundos
-    }
-
-    // Inicia a geração de popups assim que a página é carregada
-    generatePopUps();
-});
-
 
 
 
