@@ -451,3 +451,16 @@ document.addEventListener("DOMContentLoaded", function() {
     // Inicia a geração de popups assim que a página é carregada
     generatePopUps();
 });
+
+
+
+// script.js
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.getElementById('toggleButton');
+    const sidebar = document.querySelector('nav.sidebar');
+
+    toggleButton.addEventListener('click', function() {
+        sidebar.classList.toggle('active');
+    });
+});
