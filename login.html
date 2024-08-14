@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatLive IPTV - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- Vídeo de Fundo -->
+     <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="seu-video.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </div>
+    <nav class="sidebar">
+        <header>
+            <div class="image-text">
+                <div class="image">
+                    <img src="logo.png" alt="Logo">
+                </div>
+                <div class="logo-text">
+                    <span class="name">NatLive</span>
+                    <span class="profession">IPTV</span>
+                </div>
+            </div>
+            <div id="toggleButton" class="toggle">&#9776;</div>
+        </header>
+        <div class="menu">
+            <ul class="menu-bar">
+                <li><a href="index.html"><span class="icon">🏠</span><span class="text">Início</span></a></li>
+                <li><a href="plans.html"><span class="icon">📈</span><span class="text">Planos</span></a></li>
+                <li><a href="status.html"><span class="icon">📊</span><span class="text">Status</span></a></li>
+                <li><a href="login.html"><span class="icon">🔒</span><span class="text">Login</span></a></li>
+                <li><a href="register.html"><span class="icon">📝</span><span class="text">Cadastro</span></a></li>
+                <li><a href="teste-gratis.html"><span class="icon">🎁</span><span class="text">Teste Grátis</span></a></li>
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class="sun">☀️</i>
+                        <i class="moon">🌙</i>
+                    </div>
+                    <div class="toggle-switch">
+                        <div class="switch"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="profile-container">
+        <div id="userDisplay" class="user-display">Você não está logado.</div>
+        <button id="logoutButton" style="display: none;">Sair</button>
+    </div>
+    <div class="login">
+        <form id="loginForm">
+            <h1>Login</h1>
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

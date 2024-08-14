@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatLive IPTV - Página Inicial</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Popups Interativos</title>
+</head>
+<body>
+   
+
+
+    <div class="online-counter">
+        <div class="online-counter-text">Usuários online:</div>
+        <div id="online-users">15</div>
+        <div id="emoji" class="emoji">😊</div>
+    </div>
+    
+    <div id="popUpContainer1" class="popup-container"></div>
+    
+  
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <header>
+            <div class="image-text">
+                <div class="image">
+                    <img src="logo.png" alt="Logo">
+                </div>
+                <div class="logo-text">
+                    <span class="name">NatLive</span>
+                    <span class="profession">IPTV</span>
+                </div>
+            </div>
+            <div id="toggleButton" class="toggle">&#9776;</div>
+        </header>
+        <div class="menu">
+            <ul class="menu-bar">
+                <li><a href="index.html"><span class="icon">🏠</span><span class="text">Início</span></a></li>
+                <li><a href="plans.html"><span class="icon">📈</span><span class="text">Planos</span></a></li>
+                
+                <li><a href="vip.html"><span class="icon">🌟</span><span class="text">Área VIP</span></a></li>
+
+                <li><a href="status.html"><span class="icon">📊</span><span class="text">Status</span></a></li>
+                <li><a href="login.html"><span class="icon">🔒</span><span class="text">Login</span></a></li>
+                <li><a href="register.html"><span class="icon">📝</span><span class="text">Cadastro</span></a></li>
+                <li><a href="teste-gratis.html"><span class="icon">🎁</span><span class="text">Teste Grátis</span></a></li>
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class="sun">☀️</i>
+                        <i class="moon">🌙</i>
+                    </div>
+                    <div class="toggle-switch">
+                        <div class="switch"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="home">
+        <div class="hero-section">
+            <h1><span class="welcome-icon">👋</span> Bem-vindo ao NatLive IPTV</h1>
+            <p>Escolha um plano e comece a assistir aos melhores canais e conteúdos agora mesmo!</p>
+            <a href="plans.html" class="cta-button">Explore Nossos Planos</a>
+        </div>
+
+        <!-- Informações de Novidades de Filmes e Notícias -->
+        <div class="info-section">
+            <div class="news">
+                <h2>Últimas Novidades de Filmes</h2>
+                <ul>
+                    <li><a href="#">Filme X estreia em breve nas telonas!</a></li>
+                    <li><a href="#">Filme Y ganha prêmio de melhor direção</a></li>
+                    <li><a href="#">Confira a crítica do novo filme Z</a></li>
+                </ul>
+            </div>
+            <div class="news">
+                <h2>Notícias Recentes</h2>
+                <ul>
+                    <li><a href="#">Nova série de TV é renovada para segunda temporada</a></li>
+                    <li><a href="#">Conheça os indicados ao Oscar deste ano</a></li>
+                    <li><a href="#">Streaming ultrapassa TV a cabo em audiência</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Catálogo de Filmes Recém-Lançados -->
+        <div class="movie-slider">
+            <button class="prev">&lt;</button>
+            <div class="slider">
+                <div class="slide"><img src="capa/filme1.jpg" alt="Filme 1"></div>
+                <div class="slide"><img src="capa/filme2.jpg" alt="Filme 2"></div>
+                <div class="slide"><img src="capa/filme3.jpg" alt="Filme 3"></div>
+                <div class="slide"><img src="capa/filme4.jpg" alt="Filme 4"></div>
+                <div class="slide"><img src="capa/filme5.jpg" alt="Filme 5"></div>
+                <div class="slide"><img src="capa/filme6.jpg" alt="Filme 6"></div>
+            </div>
+            <button class="next">&gt;</button>
+        </div>
+
+        <!-- Seção de Planos -->
+        <div class="plans-section">
+            <h2>Nossos Planos</h2>
+            <div class="plan-cards">
+                <div class="plan-card">
+                    <h3>Básico</h3>
+                    <p>R$19,90/mês</p>
+                    <a href="subscribe.html" class="plan-button">Assine Agora</a>
+                </div>
+                <div class="plan-card">
+                    <h3>Padrão</h3>
+                    <p>R$39,90/mês</p>
+                    <a href="subscribe.html" class="plan-button">Assine Agora</a>
+                </div>
+                <div class="plan-card">
+                    <h3>Premium</h3>
+                    <p>R$59,90/mês</p>
+                    <a href="subscribe.html" class="plan-button">Assine Agora</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pop-ups de Assinaturas -->
+        <div class="pop-ups">
+            <div id="popUpContainer"></div>
+        </div>
+    </div>
+    <div class="profile-container">
+        <div id="userDisplay" class="user-display">Você não está logado.</div>
+        <button id="logoutButton" style="display: none;">Sair</button>
+    </div>
+      <!-- Seção de Filmes e Séries Recentes -->
+      <div class="recent-content">
+        <h2>Filmes e Séries Recentes</h2>
+        <div id="recent-items" class="recent-items">
+            <!-- Conteúdo será inserido aqui -->
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+<script>
+    function getRandomOnlineUsers(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function animateCounter(element, start, end, duration) {
+        let startTime = null;
+
+        function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+            const current = Math.floor(progress * (end - start) + start);
+
+            element.textContent = current;
+
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            } else {
+                element.classList.remove('animate');
+            }
+        }
+
+        element.classList.add('animate');
+        window.requestAnimationFrame(step);
+    }
+
+    function updateOnlineUsers() {
+        const onlineUsersElement = document.getElementById('online-users');
+        const currentUsers = parseInt(onlineUsersElement.textContent, 15);
+        const newUsers = getRandomOnlineUsers(320, 1200);
+
+        animateCounter(onlineUsersElement, currentUsers, newUsers, 2000); // Duração de 1 segundo
+    }
+
+    // Inicializa o contador com um número entre 5 e 10
+    document.getElementById('online-users').textContent = getRandomOnlineUsers(320, 1200);
+
+    // Atualiza o número de usuários online a cada 10 segundos
+    setInterval(updateOnlineUsers, 20000);
+
+
+    const emojis = ["😊", "😎", "🚀", "🔥", "🎉"]; // Lista de emojis
+let emojiIndex = 0; // Índice inicial
+
+function changeEmoji() {
+    // Atualiza o conteúdo do div emoji
+    document.getElementById("emoji").textContent = emojis[emojiIndex];
+
+    // Incrementa o índice do emoji
+    emojiIndex = (emojiIndex + 1) % emojis.length;
+}
+
+// Muda o emoji a cada 2 segundos (2000 milissegundos)
+setInterval(changeEmoji, 2000);
+
+
+const names = ["João", "Maria", "Pedro", "Ana", "Lucas", "Beatriz", "Carlos", "Fernanda", "Paulo", "Clara"];
+const movies = ["O Poderoso Chefão", "Vingadores: Ultimato", "Titanic", "O Rei Leão", "Star Wars", "Matrix", "Jurassic Park", "Harry Potter", "Senhor dos Anéis", "Homem-Aranha"];
+const userCount = 50; // Número de usuários a serem mostrados
+
+function showPopup() {
+    const userList = document.getElementById('user-list');
+    let currentIndex = 0;
+
+    function showNextUser() {
+        if (currentIndex >= userCount) {
+            document.getElementById('user-popup').style.display = 'none'; // Oculta o popup quando todos os usuários foram mostrados
+            return;
+        }
+
+        const randomName = names[Math.floor(Math.random() * names.length)];
+        const randomMovie = movies[Math.floor(Math.random() * movies.length)];
+        const userMessage = `${randomName} está assistindo "${randomMovie}"`;
+
+        const p = document.createElement('p');
+        p.textContent = userMessage;
+        userList.appendChild(p);
+
+        // Animação de aparecimento
+        setTimeout(() => {
+            p.style.opacity = 1;
+        }, 100);
+
+        currentIndex++;
+        setTimeout(showNextUser, 2000); // Exibe um usuário a cada 2 segundos
+    }
+
+    document.getElementById('user-popup').style.display = 'flex'; // Mostra o popup
+    showNextUser(); // Inicia a exibição dos usuários
+}
+
+// Fecha o popup ao clicar no botão de fechar
+document.querySelector('.close-btn').addEventListener('click', function () {
+    document.getElementById('user-popup').style.display = 'none';
+});
+
+// Exibe o popup automaticamente após o carregamento da página
+window.onload = function() {
+    showPopup();
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const names = ["João", "Maria", "Pedro", "Ana", "Carlos", "Laura", "Luiz", "Fernanda", "Richard", "Cristina", "Hyara", "Nicole", "Igor", "Nathan", "Talita", "Ângela", "Luciana", "Daniella", "Suzana", "Raul", "Enzo", "Levi"];
+    const movies = ["O Poderoso Chefão", "Vingadores: Ultimato", "Titanic", "O Rei Leão", "Star Wars", "Matrix", "Jurassic Park", "Harry Potter", "Senhor dos Anéis", "Homem-Aranha"];
+    const popUpContainer = document.getElementById('popUpContainer1');
+    const maxNames = names.length;
+    let usedNames = [];
+
+    function generateUniqueName() {
+        if (usedNames.length >= maxNames) {
+            usedNames = []; // Resetar se todos os nomes foram usados
+        }
+        let randomName;
+        do {
+            randomName = names[Math.floor(Math.random() * names.length)];
+        } while (usedNames.includes(randomName));
+        usedNames.push(randomName);
+        return randomName;
+    }
+
+    function createPopUp(message) {
+        const popUp = document.createElement('div');
+        popUp.className = 'pop-up';
+        popUp.textContent = message;
+        popUpContainer.appendChild(popUp);
+
+        // Remove pop-up após a animação
+        setTimeout(() => {
+            popUp.remove();
+        }, 5000);
+    }
+
+    function generatePopUps() {
+        setInterval(() => {
+            const name = generateUniqueName();
+            const movie = movies[Math.floor(Math.random() * movies.length)];
+            createPopUp(`${name} está assistindo "${movie}"`);
+        }, 10000); // Novo pop-up a cada 10 segundos
+    }
+
+    // Inicia a geração de popups assim que a página é carregada
+    generatePopUps();
+});
+
+
+
+  
+</script>
+
+
+</html>

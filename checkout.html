@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - NatLive</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .checkout-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            position: relative;
+        }
+
+        .checkout-container h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .checkout-container p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .pix-info {
+            background-color: #e0f7fa;
+            border: 1px solid #00796b;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .pix-info strong {
+            font-size: 1.2em;
+            color: #00796b;
+        }
+
+        .pix-info img {
+            width: 200px;
+            height: 200px;
+            margin-top: 15px;
+            border: 2px solid #00796b;
+            border-radius: 8px;
+        }
+
+        .checkout-container a {
+            display: inline-block;
+            padding: 12px 25px;
+            color: #fff;
+            background-color: #00796b;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .checkout-container a:hover {
+            background-color: #004d40;
+            transform: scale(1.05);
+        }
+
+        .send-proof-button {
+            display: none;
+            margin-top: 20px;
+            padding: 12px 25px;
+            color: #fff;
+            background-color: #28a745;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .send-proof-button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="checkout-container">
+        <h2>Checkout - <span id="plan-name"></span></h2>
+        <p>Valor: R$ <span id="plan-price"></span></p>
+
+        <div class="pix-info">
+            <p>Para concluir a sua assinatura, faça o pagamento via PIX:</p>
+            <strong>Chave PIX:</strong> <span id="pix-key">482.291.008-37</span>
+            <p>Ou escaneie o QR Code abaixo:</p>
+            <img src="qrcode_pix.png" alt="QR Code para pagamento via PIX">
+        </div>
+
+        <a href="index.html">Voltar à página inicial</a>
+        <a id="send-proof" href="https://wa.me/5511945598914?text=Olá,%20fiz%20um%20pagamento%20via%20PIX%20e%20gostaria%20de%20enviar%20o%20comprovante.%20Por%20favor,%20confirmar%20meu%20plano." class="send-proof-button">Enviar Comprovante</a>
+    </div>
+
+    <script>
+        // Captura os parâmetros da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const planName = urlParams.get('plan');
+        const planPrice = urlParams.get('price');
+
+        // Exibe as informações na página
+        document.getElementById('plan-name').textContent = planName.charAt(0).toUpperCase() + planName.slice(1);
+        document.getElementById('plan-price').textContent = planPrice;
+
+        // Exibe o botão "Enviar Comprovante" após 10 segundos
+        setTimeout(() => {
+            document.getElementById('send-proof').style.display = 'inline-block';
+        }, 10000); // 10000 milissegundos = 10 segundos
+    </script>
+</body>
+</html>

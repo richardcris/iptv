@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área VIP - NatLive</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .vip-login-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .vip-login-container h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #00796b;
+        }
+
+        .vip-login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        .vip-login-container button {
+            background-color: #00796b;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .vip-login-container button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <div class="vip-login-container">
+        <h2>Área VIP</h2>
+        <form id="vip-login-form">
+            <input type="text" id="username" placeholder="Nome de Usuário" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('vip-login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Substitua 'usuarioVIP' e 'senhaVIP' pelos dados reais
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === 'usuarioVIP' && password === 'senhaVIP') {
+                window.location.href = 'vip-content.html'; // Redirecionar para a página VIP após login bem-sucedido
+            } else {
+                alert('Nome de usuário ou senha incorretos.');
+            }
+        });
+    </script>
+</body>
+</html>
