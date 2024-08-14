@@ -1736,18 +1736,3 @@ body {
   }
 }
 
-/* Estilos para Telas Maiores (Desktops) */
-@media (min-width: 1025px) {
-  .container {
-      padding: 20px;
-  }
-
-  .content-box {
-      width: 30%;
-      margin: 15px;
-  }
-
-  .menu {
-      flex-direction: row;
-  }
-}
