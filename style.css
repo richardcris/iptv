@@ -1641,33 +1641,16 @@ body {
   margin-left: 10px;
 }
 
-/* Ajustes Globais */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Container Principal */
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-}
-
-/* Menu Responsivo */
+/* Ajuste para o Menu */
 .menu {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center; /* Centraliza o menu */
   align-items: center;
   padding: 10px;
   background-color: #333;
   color: white;
+  flex-wrap: wrap; /* Permite quebra de linha para itens do menu */
 }
 
 .menu a {
@@ -1681,60 +1664,70 @@ body {
   background-color: #575757;
 }
 
-/* Caixa de Conteúdo */
-.content-box {
-  background: #00796b;
-  color: #fff;
-  padding: 15px;
+/* Ajuste para o Formulário de Cadastro */
+.cadastro-form {
+  background-color: #fff;
+  padding: 20px;
   border-radius: 10px;
-  width: 100%;
-  max-width: 350px;
-  margin: 10px 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  margin: 20px auto; /* Centraliza o formulário */
 }
 
-.content-box h3 {
-  margin-top: 0;
-  font-size: 1.5em;
-}
-
-.content-box p {
-  font-size: 0.9em;
+.cadastro-form input[type="text"],
+.cadastro-form input[type="password"],
+.cadastro-form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 /* Estilos Específicos para Dispositivos Pequenos (celulares) */
 @media (max-width: 600px) {
-  .container {
-      padding: 5px;
-  }
-
   .menu {
-      flex-direction: column;
+      flex-direction: column; /* Menu em coluna */
+      text-align: center;
   }
 
-  .content-box {
-      width: 90%;
-      margin: 5px 0;
+  .menu a {
+      font-size: 1.2em; /* Aumenta o tamanho da fonte para melhor leitura */
+      padding: 12px; /* Aumenta o espaçamento */
+  }
+
+  .cadastro-form {
+      padding: 15px;
+      width: 90%; /* Garante que o formulário ocupe quase toda a largura da tela */
   }
 }
 
 /* Estilos para Tablets */
 @media (min-width: 601px) and (max-width: 1024px) {
-  .container {
-      padding: 15px;
-  }
-
   .menu {
-      flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-between; /* Ajuste para tablets */
   }
 
-  .content-box {
-      width: 48%;
-      margin: 10px 1%;
+  .cadastro-form {
+      padding: 20px;
+      width: 80%;
   }
 }
+
+/* Estilos para Telas Maiores (Desktops) */
+@media (min-width: 1025px) {
+  .menu {
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  .cadastro-form {
+      padding: 30px;
+      width: 60%;
+  }
+}
+
 
 /* Reset Básico */
 * {
@@ -1930,317 +1923,5 @@ nav.sidebar .menu-bar .icon {
 }
 
 
-/* Ajustes de visibilidade do menu */
-nav.sidebar {
-  width: 250px;
-  background-color: #222;
-  color: #fff;
-  position: fixed;
-  height: 100%;
-  left: 0;
-  top: 0;
-  overflow: auto;
-  transition: all 0.3s;
-}
-
-nav.sidebar .menu-bar {
-  list-style-type: none;
-  padding: 0;
-}
-
-nav.sidebar .menu-bar li {
-  padding: 15px;
-  border-bottom: 1px solid #333;
-}
-
-nav.sidebar .menu-bar li a {
-  color: #fff;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-}
-
-nav.sidebar .menu-bar .icon {
-  margin-right: 10px;
-}
-
-.main-content {
-  margin-left: 250px;
-  padding: 20px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  nav.sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
-      display: none;
-  }
-
-  nav.sidebar.active {
-      display: block;
-  }
-
-  .main-content {
-      margin-left: 0;
-  }
-
-  #toggleButton {
-      display: block;
-      background: #222;
-      color: #fff;
-      padding: 10px;
-      cursor: pointer;
-      border: none;
-      text-align: center;
-  }
-}
-
-#toggleButton {
-  display: none;
-  cursor: pointer;
-}
-
-/* Botões de navegação do slider */
-.movie-slider button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.movie-slider .prev {
-  left: 10px;
-}
-
-.movie-slider .next {
-  right: 10px;
-}
-
-/* Pop-ups e outras seções */
-.popup-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 300px;
-  max-height: 400px;
-  overflow-y: auto;
-}
-
-.pop-up {
-  background: #333;
-  color: #fff;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-}
-
-.profile-container {
-  padding: 10px;
-  background: #fff;
-  border-top: 1px solid #ccc;
-  text-align: center;
-}
-
-.plan-cards {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.plan-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 10px;
-  flex: 1;
-  min-width: 200px;
-  text-align: center;
-}
-
-.plan-button {
-  display: inline-block;
-  background: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.cta-button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 20px;
-}
-
-.info-section {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.news {
-  width: 48%;
-  background: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
-
-.recent-content {
-  margin-top: 20px;
-}
 
 
-
-/* Estilo básico para a sidebar */
-nav.sidebar {
-  width: 250px;
-  background-color: #222;
-  color: #fff;
-  position: fixed;
-  height: 100%;
-  left: 0;
-  top: 0;
-  overflow: auto;
-  transition: all 0.3s;
-  transform: translateX(-100%); /* Inicialmente escondido */
-}
-
-nav.sidebar.active {
-  transform: translateX(0); /* Mostrar o menu quando a classe active está presente */
-}
-
-nav.sidebar header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background: #333;
-}
-
-nav.sidebar .image-text {
-  display: flex;
-  align-items: center;
-}
-
-nav.sidebar .image img {
-  width: 40px;
-  height: 40px;
-}
-
-nav.sidebar .logo-text {
-  margin-left: 10px;
-}
-
-nav.sidebar .logo-text .name {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-nav.sidebar .logo-text .profession {
-  font-size: 14px;
-  color: #aaa;
-}
-
-nav.sidebar .toggle {
-  display: none; /* Escondido por padrão */
-}
-
-/* Menu items */
-nav.sidebar .menu-bar {
-  list-style-type: none;
-  padding: 0;
-}
-
-nav.sidebar .menu-bar li {
-  padding: 15px;
-  border-bottom: 1px solid #333;
-}
-
-nav.sidebar .menu-bar li a {
-  color: #fff;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-}
-
-nav.sidebar .menu-bar .icon {
-  margin-right: 10px;
-}
-
-/* Main content adjustment */
-.main-content {
-  margin-left: 250px;
-  padding: 20px;
-}
-
-/* Botões de navegação do slider */
-.movie-slider button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.movie-slider .prev {
-  left: 10px;
-}
-
-.movie-slider .next {
-  right: 10px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  nav.sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
-      transform: translateX(-100%);
-  }
-
-  nav.sidebar.active {
-      transform: translateX(0);
-  }
-
-  .main-content {
-      margin-left: 0;
-  }
-
-  #toggleButton {
-      display: block;
-      background: #222;
-      color: #fff;
-      padding: 10px;
-      cursor: pointer;
-      border: none;
-      text-align: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-  }
-}
-
-/* Estilos adicionais */
-#toggleButton {
-  display: none;
-  cursor: pointer;
-}
