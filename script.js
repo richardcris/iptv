@@ -228,7 +228,7 @@ document.getElementById('checkStatusButton').addEventListener('click', function(
             clearInterval(interval);
 
             // Teste de conexão com o servidor
-            fetch('http://cdrn1.com/get.php?username=JTEcuQ&password=7bHt6w&type=m3u_plus&output=ts')
+            fetch('http://cdrn1.com/get.php?username=bxX5WN&password=1dr533&type=m3u_plus&output=ts')
                 .then(response => {
                     if (response.ok) {
                         statusMessage.innerHTML = '<p style="color: green;">Conexão com o servidor está OK!</p>';
