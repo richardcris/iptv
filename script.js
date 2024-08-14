@@ -408,6 +408,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+<script>
+    function getRandomOnlineUsers(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function animateCounter(element, start, end, duration) {
+        let startTime = null;
+
+        function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+            const current = Math.floor(progress * (end - start) + start);
+
+            element.textContent = current;
+
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            } else {
+                element.classList.remove('animate');
+            }
+        }
+
+        element.classList.add('animate');
+        window.requestAnimationFrame(step);
+    }
+
+    function updateOnlineUsers() {
+        const onlineUsersElement = document.getElementById('online-users');
+        const currentUsers = parseInt(onlineUsersElement.textContent, 10);
+        const newUsers = getRandomOnlineUsers(5, 20);
+
+        animateCounter(onlineUsersElement, currentUsers, newUsers, 1000); // Duração de 1 segundo
+    }
+
+    // Inicializa o contador com um número entre 5 e 10
+    document.getElementById('online-users').textContent = getRandomOnlineUsers(5, 10);
+
+    // Atualiza o número de usuários online a cada 10 segundos
+    setInterval(updateOnlineUsers, 10000);
+</script>
 
 
 
