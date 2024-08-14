@@ -1238,9 +1238,7 @@ html, body {
   transform: translateX(0); /* Mantém o menu visível quando aberto */
 }
 
-.sidebar .toggle {
-  display: none; /* Esconde o ícone de toggle se o menu deve estar sempre visível */
-}
+ /* Esconde o ícone de toggle se o menu deve estar sempre visível */
 .recent-content {
   padding: 20px;
 }
