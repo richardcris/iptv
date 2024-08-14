@@ -1648,6 +1648,19 @@ body {
   margin-left: 10px;
 }
 
-
+.register.html{
+  position: relative;
+  z-index: 1; /* Faz com que o formulário de login fique sobre o vídeo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  color: white; /* Ajusta o texto para ser legível sobre o vídeo */
+  padding: 20px;
+   /* Adiciona um fundo semi-transparente para melhorar a legibilidade */
+  border-radius: 10px; /* Arredonda os cantos do formulário */
+}
 
 
