@@ -351,7 +351,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Fetch recent content
     async function fetchRecentContent() {
         try {
-            const response = await fetch('http://cdrn1.com/get.php?username=JTEcuQ&password=7bHt6w&type=m3u_plus&output=ts');
+            const response = await fetch('http://cdrn1.com/get.php?username=bxX5WN&password=1dr533&type=m3u_plus&output=ts');
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
