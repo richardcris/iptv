@@ -1222,6 +1222,58 @@ html, body {
         }
 
     /* Garanta que o menu esteja visível por padrão */
+.sidebar {
+  width: 250px; /* Largura do menu lateral */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #333; /* Cor de fundo do menu */
+  color: #fff; /* Cor do texto */
+  transform: translateX(0); /* Faz com que o menu esteja visível */
+  transition: transform 0.3s ease; /* Transição suave para o menu abrir/fechar */
+}
+
+.sidebar.open {
+  transform: translateX(0); /* Mantém o menu visível quando aberto */
+}
+
+.sidebar .toggle {
+  display: none; /* Esconde o ícone de toggle se o menu deve estar sempre visível */
+}
+.recent-content {
+  padding: 20px;
+}
+
+.recent-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.recent-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.recent-item {
+  width: calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+
+.recent-item img {
+  width: 100%;
+  height: auto;
+}
+
+.recent-item h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.recent-item p {
+  font-size: 14px;
+}
 
 
 
@@ -2052,3 +2104,143 @@ nav.sidebar .menu-bar .icon {
 
 
 
+/* Estilo básico para a sidebar */
+nav.sidebar {
+  width: 250px;
+  background-color: #222;
+  color: #fff;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  transition: all 0.3s;
+  transform: translateX(-100%); /* Inicialmente escondido */
+}
+
+nav.sidebar.active {
+  transform: translateX(0); /* Mostrar o menu quando a classe active está presente */
+}
+
+nav.sidebar header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #333;
+}
+
+nav.sidebar .image-text {
+  display: flex;
+  align-items: center;
+}
+
+nav.sidebar .image img {
+  width: 40px;
+  height: 40px;
+}
+
+nav.sidebar .logo-text {
+  margin-left: 10px;
+}
+
+nav.sidebar .logo-text .name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav.sidebar .logo-text .profession {
+  font-size: 14px;
+  color: #aaa;
+}
+
+nav.sidebar .toggle {
+  display: none; /* Escondido por padrão */
+}
+
+/* Menu items */
+nav.sidebar .menu-bar {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav.sidebar .menu-bar li {
+  padding: 15px;
+  border-bottom: 1px solid #333;
+}
+
+nav.sidebar .menu-bar li a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+nav.sidebar .menu-bar .icon {
+  margin-right: 10px;
+}
+
+/* Main content adjustment */
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+/* Botões de navegação do slider */
+.movie-slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.movie-slider .prev {
+  left: 10px;
+}
+
+.movie-slider .next {
+  right: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav.sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      transform: translateX(-100%);
+  }
+
+  nav.sidebar.active {
+      transform: translateX(0);
+  }
+
+  .main-content {
+      margin-left: 0;
+  }
+
+  #toggleButton {
+      display: block;
+      background: #222;
+      color: #fff;
+      padding: 10px;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+  }
+}
+
+/* Estilos adicionais */
+#toggleButton {
+  display: none;
+  cursor: pointer;
+}
