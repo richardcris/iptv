@@ -164,16 +164,19 @@
         function updateOnlineUsers() {
             const onlineUsersElement = document.getElementById('online-users');
             const currentUsers = parseInt(onlineUsersElement.textContent, 10);
-            const newUsers = getRandomOnlineUsers(5, 20);
+            const newUsers = getRandomOnlineUsers(450, 1200);
     
             animateCounter(onlineUsersElement, currentUsers, newUsers, 1000); // Duração de 1 segundo
         }
     
         // Inicializa o contador com um número entre 5 e 10
-        document.getElementById('online-users').textContent = getRandomOnlineUsers(5, 10);
+        document.getElementById('online-users').textContent = getRandomOnlineUsers(450, 1200);
     
         // Atualiza o número de usuários online a cada 10 segundos
         setInterval(updateOnlineUsers, 10000);
+
+
+
 
         const emojis = ["😊", "😎", "🚀", "🔥", "🎉"]; // Lista de emojis
 let emojiIndex = 0; // Índice inicial
