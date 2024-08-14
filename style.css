@@ -1778,32 +1778,7 @@ nav.sidebar .menu-bar .icon {
   padding: 20px;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  nav.sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
-      display: none;
-  }
 
-  nav.sidebar.active {
-      display: block;
-  }
-
-  .main-content {
-      margin-left: 0;
-  }
-
-  #toggleButton {
-      display: block;
-  }
-}
-
-#toggleButton {
-  display: none;
-  cursor: pointer;
-}
 
 /* Pop-ups */
 .popup-container {
