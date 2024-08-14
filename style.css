@@ -1238,7 +1238,9 @@ html, body {
   transform: translateX(0); /* Mantém o menu visível quando aberto */
 }
 
- /* Esconde o ícone de toggle se o menu deve estar sempre visível */
+.sidebar .toggle {
+  display: none; /* Esconde o ícone de toggle se o menu deve estar sempre visível */
+}
 .recent-content {
   padding: 20px;
 }
@@ -1606,7 +1608,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
- 
+  background-color: #43029d;
   color: #fff;
   padding: 10px;
   border-radius: 5px;
