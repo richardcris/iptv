@@ -5,64 +5,179 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NatLive IPTV - Planos</title>
     <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap'><link rel="stylesheet" href="./style.css">
+    
     <style>
-        /* Vídeo de Fundo */
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: -1;
+    /* Seção de Planos */
+    .plans-section {
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
         }
 
-        #background-video {
+        .plans-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #cb0606;
+            text-shadow: 2px 2px 4px rgba(23, 1, 168, 0.6);
+        }
+
+        .plans-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        .plan-card {
+            background: rgba(0, 21, 153, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 1, 1, 0.3);
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .plan-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(249, 0, 0, 0.4);
+        }
+
+        .plan-card img {
             width: 100%;
-            height: 100%;
+            height: 200px;
             object-fit: cover;
+            border-bottom: 2px solid #cd0000;
+        }
+
+        .plan-card h3 {
+            margin: 15px 0;
+            font-size: 1.8em;
+            color: #ece1e1;
+        }
+
+        .plan-card .price {
+            font-size: 1.5em;
+            color: #f8efef;
+            margin: 10px 0;
+        }
+
+        .plan-card p {
+            color: #f4f2f2;
+            margin-bottom: 20px;
+        }
+
+        .plan-card .subscribe-button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fbfbfb;
+            background-color: #a12727;
+            border-radius: 25px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plan-card .subscribe-button:hover {
+            background-color: #e23b3b;
+            transform: scale(1.1);
+        }
+
+        .plan-card .subscribe-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
+            border-radius: 50%;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+        }
+
+        .plan-card .subscribe-button:hover::before {
+            width: 0;
+            height: 0;
+            top: 50%;
+            left: 50%;
+        }
+
+        .plan-card .subscribe-button span {
+            position: relative;
+            z-index: 1;
         }
 
        
     </style>
 </head>
 <body>
-   
-
-    <!-- Sidebar -->
-    <nav class="sidebar">
+    <nav class="sidebar close">
         <header>
-            <div class="image-text">
-                <div class="image">
-                    <img src="logo.png" alt="Logo">
-                </div>
-                <div class="logo-text">
-                    <span class="name">NatLive</span>
-                    <span class="profession">IPTV</span>
-                </div>
+          <div class="image-text">
+            <span class="image">
+              <img src="logo.png" alt="image gallery">
+            </span>
+      
+            <div class="text logo-text">
+              <span class="name">NatLive </span>
+              <span class="profession">Development</span>
             </div>
-            <div id="toggleButton" class="toggle">&#9776;</div>
+          </div>
+      
+          <i class='bx bx-chevron-right toggle'></i>
         </header>
-        <div class="menu">
-            <ul class="menu-bar">
-                <li><a href="index.html"><span class="icon">🏠</span><span class="text">Início</span></a></li>
-                <li><a href="plans.html"><span class="icon">📈</span><span class="text">Planos</span></a></li>
-                <li><a href="status.html"><span class="icon">📊</span><span class="text">Status</span></a></li>
-                <li><a href="login.html"><span class="icon">🔒</span><span class="text">Login</span></a></li>
-                <li><a href="register.html"><span class="icon">📝</span><span class="text">Cadastro</span></a></li>
-                <li><a href="teste-gratis.html"><span class="icon">🎁</span><span class="text">Teste Grátis</span></a></li>
-                <li class="mode">
-                    <div class="sun-moon">
-                        <i class="sun">☀️</i>
-                        <i class="moon">🌙</i>
-                    </div>
-                    <div class="toggle-switch">
-                        <div class="switch"></div>
-                    </div>
-                </li>
-            </ul>
+      
+        <div class="menu-bar">
+          <div class="menu">
+      
+            <li class="search-box">
+              <i class='bx bx-search icon'></i>
+              <input type="text" placeholder="Search...">
+            </li>
+      
+            <li><a href="index.html"><span class="icon">🏠</span><span class="text">Início</span></a></li>
+            <li><a href="plans.html"><span class="icon">📈</span><span class="text">Planos</span></a></li>
+            <li><a href="status.html"><span class="icon">📊</span><span class="text">Status</span></a></li>
+            <li><a href="login.html"><span class="icon">🔒</span><span class="text">Login</span></a></li>
+            <li><a href="register.html"><span class="icon">📝</span><span class="text">Cadastro</span></a></li>
+            <li><a href="teste-gratis.html"><span class="icon">🎁</span><span class="text">Teste Grátis</span></a></l
+          
+      
+           class="bottom-content">
+            <li class="">
+              <a href="#">
+                <i class='bx bx-log-out icon'></i>
+                <span class="text nav-text">Logout</span>
+              </a>
+            </li>
+      
+            <li class="mode">
+              <div class="sun-moon">
+                <i class='bx bx-moon icon moon'></i>
+                <i class='bx bx-sun icon sun'></i>
+              </div>
+              <span class="mode-text text">Dark mode</span>
+      
+              <div class="toggle-switch">
+                <span class="switch"></span>
+              </div>
+            </li>
+      
+          </div>
         </div>
-    </nav>
+      
+      </nav>
+     
 
     <!-- Seção de Planos -->
     <div class="plans-section">
