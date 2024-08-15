@@ -1,0 +1,50 @@
+.online-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif; /* added font family */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: move-counter 1s ease-in-out infinite;
+    margin-top: 85px;
+  }
+  
+  @keyframes move-counter {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .online-counter-text {
+    font-size: 1em;
+    margin-right: 10px;
+    font-family: 'Montserrat', sans-serif; /* added font family */
+  }
+  
+  #online-users {
+    font-size: 2em;
+    font-weight: bold;
+    color: #9803f5;
+    animation: count-animation 0.3s ease-in-out;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 10px;
+    font-family: 'Montserrat', sans-serif; /* added font family */
+  }
+  
+  .emoji {
+    font-size: 2em;
+    margin-left: 10px;
+    font-family: 'Montserrat', sans-serif; /* added font family */
+  }
