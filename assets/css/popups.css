@@ -1,0 +1,26 @@
+/* Estilos para os pop-ups */
+.pop-ups {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+    width: 300px;
+  }
+  
+  .pop-up {
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    animation: fadeInOut 5s linear;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
